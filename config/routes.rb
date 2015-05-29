@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   get "users" => "users#index"
   get "users/new" => "users#new" 
   post "users" => "users#create"
+
+  # defines routes for the sessions controller actions
+  get '/login'     => 'sessions#new'
+  post '/login'    => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
