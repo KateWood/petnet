@@ -2,17 +2,20 @@
 
 <h3>Log In</h3>
 <%= form_for :login do |f| %>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.submit 'Log In' %>
-  </div>
+<!--     <div id="error_explanation">
+        <h2><%= @error %></h2>
+    </div> -->
+    <div>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+    </div>
+    <div>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    </div>
+    <div>
+        <%= f.submit 'Log In' %>
+    </div>
 <% end %>
 
 <h3>Don't have an account? <%= link_to 'Sign Up!', users_new_path %></h3>
