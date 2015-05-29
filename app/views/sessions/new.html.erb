@@ -1,4 +1,6 @@
-<h1>Log In</h1>
+<h1>Welcome to PetNet!</h1>
+
+<h3>Log In</h3>
 <%= form_for :login do |f| %>
   <div>
     <%= f.label :email %>
@@ -12,3 +14,6 @@
     <%= f.submit 'Log In' %>
   </div>
 <% end %>
+
+<h3>Don't have an account?
+<%= link_to 'Sign Up!', users_new_path %></h3>
