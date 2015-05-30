@@ -1,0 +1,13 @@
+<% if current_user %>
+  	Logged in as: <%= current_user.name %> <%= link_to 'Log Out', logout_path, method: :delete %>
+<% else %>
+  	<%= link_to 'Log In', login_path %>
+  	<%= link_to 'Sign Up', users_new_path %>
+<% end %>
+
+<h1>Pets</h1>
+<ul>
+	<% @pets.each do |pet| %>
+		<li><%= pet.name %> - <%= pet.user_id.name %></li>
+	<% end %>
+</ul>
