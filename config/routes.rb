@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   # defines routes for the users controller actions
   get "users" => "users#index"
-  get "users/new" => "users#new" 
+  get "users/new" => "users#new"
   post "users" => "users#create"
+  get "users/:id" => "users#show"
 
   # defines routes for the sessions controller actions
   get '/login' => 'sessions#new'
