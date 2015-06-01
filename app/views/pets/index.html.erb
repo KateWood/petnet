@@ -5,6 +5,8 @@
   	<%= link_to 'Sign Up', users_new_path %>
 <% end %>
 
+<%= link_to 'View Users', users_path %>
+
 <h1>Pets</h1>
 <table>
   	<thead>
@@ -26,6 +28,7 @@
 	        <td><%= pet.description %></td>
 	        <td><%= pet.birthday %></td>
 	        <td><%= pet.user.name if pet.user %></td>
+          <td><%= link_to 'Show', pet %></td>
       	</tr>
     	<% end %>
   	</tbody>

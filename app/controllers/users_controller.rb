@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		
+		@user = set_user
+		@pets = Pet.where(user_id: @user.id)
 	end
 
 	def new
