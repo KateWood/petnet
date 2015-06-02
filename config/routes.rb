@@ -6,15 +6,19 @@ Rails.application.routes.draw do
   get "users/:id" => "users#show", as: "user"
 
   # defines routes for the sessions controller actions
-  get "/login" => "sessions#new"
-  post "/login" => "sessions#create"
-  delete "/logout" => "sessions#destroy"
+  get "login" => "sessions#new"
+  post "login" => "sessions#create"
+  delete "logout" => "sessions#destroy"
 
   # defines routes for the pets controller actions
   get "pets" => "pets#index"
   post "pets" => "pets#create"
   get "pets/new" => "pets#new"
+  get "pets/:id/edit" => "pets#edit"
   get "pets/:id" => "pets#show", as: "pet"
+  patch "pets/:id" => "pets#update"
+  put "pets/:id" => "pets#update"
+  delete "pets/:id" => "pets#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

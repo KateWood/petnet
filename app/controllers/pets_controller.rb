@@ -24,10 +24,27 @@ class PetsController < ApplicationController
 	    # end
 	end
 
+	def edit
+		@pet = Pet.find(params[:id])
+	end
+
+	def update
+		@pet = Pet.find(params[:id])
+		respond_to do |format|
+			if @pet.update(pet_params)
+				format.html { redirect_to @pet, notice: 'Pet was successfully updated.' }
+        		format.json { render :show, status: :ok, location: @pet }
+        	else
+        		format.html { render :edit }
+        		format.json { render json: @pet.errors, status: :unprocessable_entity }
+      		end
+      	end
+	end
+
 private
 
 	def pet_params
-	    params.require(:pet).permit(:name, :birthday, :photo, :description, :user_id)
+	    params.require(:pet).permit(:name, :birthday, :photo, :description, :user_id, :image)
 	end
 
 end
