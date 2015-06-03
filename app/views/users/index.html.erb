@@ -20,10 +20,7 @@
   	<tbody>
     	<% @users.each do |user| %>
       	<tr>
-	        <td><%= link_to user do %>
-                <%= user.name %>
-                <% end %>
-            </td>
+	        <td><%= link_to user.name, user %></td>
 	        <td><%= user.email %></td>
       	</tr>
     	<% end %>

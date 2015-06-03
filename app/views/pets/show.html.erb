@@ -9,3 +9,8 @@
   	<strong>Photo:</strong>
   	<%= image_tag @pet.image.url(:large) %>
 </p>
+
+<p>
+	<strong>Owner:</strong>
+	<%= link_to @pet.user.name, @pet.user %>
+</p>

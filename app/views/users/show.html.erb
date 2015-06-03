@@ -13,15 +13,11 @@
 <% @pets.each do |pet| %>
 	<p>
 	  	<strong>Name:</strong>
-	  	<%= link_to pet do %>
-	  		<%= pet.name %>
-	  	<% end %>
+	  	<%= link_to pet.name, pet %>
 	</p>
 
 	<p>
 	  	<strong>Photo:</strong>
-	  	<%= link_to pet do %>
-	  		<%= image_tag pet.image.url(:small) %>
-	  	<% end %>
+	  	<%= link_to (image_tag pet.image.url(:small)), pet %>
 	</p>
 <% end %>
