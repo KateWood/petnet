@@ -20,6 +20,8 @@
 
 	<p>
 	  	<strong>Photo:</strong>
-	  	<%= image_tag pet.image.url(:small) %>
+	  	<%= link_to pet do %>
+	  		<%= image_tag pet.image.url(:small) %>
+	  	<% end %>
 	</p>
 <% end %>

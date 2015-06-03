@@ -23,12 +23,20 @@
   	<tbody>
     	<% @pets.each do |pet| %>
       	<tr>
-	        <td><%= pet.name %></td>
-	        <td><%= image_tag pet.image.url(:small) %></td>
+	        <td><%= link_to pet do %>
+                    <%= pet.name %>
+                <% end %>
+            </td>
+	        <td><%= link_to pet do %>
+                    <%= image_tag pet.image.url(:small) %>
+                <% end %>
+            </td>
 	        <td><%= pet.description %></td>
 	        <td><%= pet.birthday %></td>
-	        <td><%= pet.user.name if pet.user %></td>
-          <td><%= link_to 'Show', pet %></td>
+	        <td><%= link_to pet.user do %>
+                    <%= pet.user.name if pet.user %>
+                <% end %>
+            </td>
       	</tr>
     	<% end %>
   	</tbody>
