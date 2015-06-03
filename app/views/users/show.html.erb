@@ -13,7 +13,9 @@
 <% @pets.each do |pet| %>
 	<p>
 	  	<strong>Name:</strong>
-	  	<%= pet.name %>
+	  	<%= link_to pet do %>
+	  		<%= pet.name %>
+	  	<% end %>
 	</p>
 
 	<p>
