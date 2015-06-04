@@ -12,7 +12,7 @@
 
 <p>
   	<strong>Email:</strong>
-  	<%= @user.email %>
+  	<%= mail_to @user.email, @user.email %>
 </p>
 
 <% @pets.each do |pet| %>
