@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  	<strong>Photo:</strong>
+  	<%= image_tag @user.image.url(:large) %>
+</p>
+
+<p>
   	<strong>Email:</strong>
   	<%= @user.email %>
 </p>
@@ -18,6 +23,6 @@
 
 	<p>
 	  	<strong>Photo:</strong>
-	  	<%= link_to (image_tag pet.image.url(:small)), pet %>
+	  	<%= link_to (image_tag pet.image.url(:large)), pet %>
 	</p>
 <% end %>
