@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'paperclip'
 
+gem 'figaro'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
