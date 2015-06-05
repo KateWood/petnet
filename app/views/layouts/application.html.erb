@@ -10,14 +10,30 @@
 <body>
 
 <nav class="navbar navbar-default">
-	<% if current_user %>
-  		Logged in as: <%= link_to current_user.name, user_path(current_user) %> <%= link_to 'Log Out', logout_path, method: :delete %>
-	<% else %>
-  		<%= link_to 'Log In', login_path %>
-  		<%= link_to 'Sign Up', users_new_path %>
-	<% end %>
-	<%= link_to 'View Pets', pets_path %>
-	<%= link_to 'View Users', users_path %>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="pets">Petnet</a>
+    </div>
+
+        <button type="button" class="btn btn-default navbar-btn navbar-left"><%= link_to 'View Pets', pets_path %></button>
+        <button type="button" class="btn btn-default navbar-btn navbar-left"><%= link_to 'View Users', users_path %></button>
+
+
+        <% if current_user %>
+            <button type="button" class="btn btn-default navbar-btn navbar-right"><%= link_to 'Log Out', logout_path, method: :delete %></button>
+            <button type="button" class="btn btn-default navbar-btn navbar-right">Logged in as: <%= link_to current_user.name, user_path(current_user) %></button>
+        <% else %>
+            <button type="button" class="btn btn-default navbar-btn navbar-right"><%= link_to 'Log In', login_path %></button>
+            <button type="button" class="btn btn-default navbar-btn navbar-right"><%= link_to 'Sign Up', users_new_path %></button>
+        <% end %>
+    </div>
+  </div>
 </nav>
 
 <%= yield %>
