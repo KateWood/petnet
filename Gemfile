@@ -7,7 +7,7 @@ gem 'rails', '4.2.1'
 # gem 'sqlite3'
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '>= 3.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
 gem 'figaro'
+
+gem 'bootstrap-sass', '~> 3.3.4'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
