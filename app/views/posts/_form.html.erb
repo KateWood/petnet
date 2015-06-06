@@ -1,0 +1,21 @@
+<%= form_for(@post) do |f| %>
+    <div>
+        <%= f.label :pet_id %>
+        <%= f.collection_select(:pet_id, @pets.all, :id, :name) %>
+    </div>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+    <div>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+    </div>
+    <div>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>

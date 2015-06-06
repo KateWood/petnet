@@ -11,6 +11,20 @@
 </p>
 
 <p>
-	<strong>Owner:</strong>
+	<strong>Parent:</strong>
 	<%= link_to @pet.user.name, @pet.user %>
 </p>
+
+<% @posts.each do |post| %>
+	<p>
+	  	<strong>Name:</strong>
+	  	<%= link_to post.title, post %>
+	</p>
+
+	<p>
+	  	<strong>Photo:</strong>
+	  	<%= link_to (image_tag post.image.url(:large)), post %>
+	</p>
+<% end %>
+
+<%= link_to 'Delete Pet Profile', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>

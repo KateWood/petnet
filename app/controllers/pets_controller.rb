@@ -1,11 +1,14 @@
 class PetsController < ApplicationController
 
+	before_action :set_pet, only: [:show, :edit, :update, :destroy]
+
 	def index
 		@pets = Pet.all
 	end
 
 	def show
 		@pet = Pet.find(params[:id])
+		@posts = Post.where(pet_id: @pet.id)
 	end
 
 	def new
@@ -15,13 +18,8 @@ class PetsController < ApplicationController
 	def create
 		@user = User.find(session[:user_id])
     	@pet = @user.pets.create(pet_params)
-    	redirect_to pets_path
-	    # @pet = Pet.new(pet_params)
-	    # if @pet.save
-	    #   redirect_to pets_path
-	    # else
-	    #   render :new
-	    # end
+	    @pet = Pet.new(pet_params)
+	    redirect_to pets_path
 	end
 
 	def edit
@@ -41,7 +39,19 @@ class PetsController < ApplicationController
       	end
 	end
 
+	def destroy
+		@pet.destroy
+	    respond_to do |format|
+	      	format.html { redirect_to pets_url, notice: 'Pet profile successfully deleted.' }
+	      	format.json { head :no_content }
+	    end
+	end
+
 private
+
+	def set_pet
+		@pet = Pet.find(params[:id])
+	end
 
 	def pet_params
 	    params.require(:pet).permit(:name, :birthday, :photo, :description, :user_id, :image)

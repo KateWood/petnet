@@ -7,11 +7,13 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		
+		@posts = Post.where(pet_id: @pet.id)
 	end
 
 	def new
-		
+		@post = Post.new
+		@user = User.find(session[:user_id])
+		@pets = Pet.where(user_id: @user.id)
 	end
 
 	def edit
@@ -19,7 +21,11 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		
+		@user = User.find(session[:user_id])
+		@pets = Pet.where(user_id: @user.id)
+		@post = Post.new(post_params)
+		@post.save
+		redirect_to posts_path
 	end
 
 	def update
@@ -37,7 +43,7 @@ private
 	end
 
 	def post_params
-	    params.require(:post).permit(:title, :body, :image)
+	    params.require(:post).permit(:title, :body, :image, :pet_id)
 	end
 
 end

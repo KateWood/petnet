@@ -24,6 +24,14 @@ Rails.application.routes.draw do
   put "pets/:id" => "pets#update"
   delete "pets/:id" => "pets#destroy"
 
+  get "posts" => "posts#index"
+  post "posts" => "posts#create"
+  get "pets/:id/posts/new" => "posts#new"
+  get "pets/:id/posts/:id/edit" => "posts#edit"
+  get "pets/:id/posts/:id" => "posts#show", as: "post"
+  patch "pets/:id/posts/:id" => "posts#update"
+  put "pets/:id/posts/:id" => "posts#update"
+  delete "pets/:id/posts/:id" => "posts#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
