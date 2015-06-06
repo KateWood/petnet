@@ -18,7 +18,7 @@
             	<% end %>
             </td>
 	        <td><%= post.title %></td>
-	        <td><%= link_to (image_tag post.image.url(:small)), post %></td>
+	        <td><%= link_to (image_tag post.image.url(:small)), post.pet %></td>
 	        <td><%= post.body %></td>
       	</tr>
     	<% end %>

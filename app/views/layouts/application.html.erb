@@ -23,7 +23,6 @@
 
         <button type="button" class="btn btn-default navbar-btn navbar-left"><%= link_to 'View Pets', pets_path %></button>
         <button type="button" class="btn btn-default navbar-btn navbar-left"><%= link_to 'View Users', users_path %></button>
-        <button type="button" class="btn btn-default navbar-btn navbar-left"><%= link_to 'View Posts', posts_path %></button>
 
         <% if current_user %>
             <button type="button" class="btn btn-default navbar-btn navbar-right"><%= link_to 'Log Out', logout_path, method: :delete %></button>

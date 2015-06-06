@@ -18,6 +18,20 @@
   	<%= @post.body %>
 </p>
 
+<% @comments.each do |comment| %>
+	<p>
+	  	<strong>Posted by:</strong>
+	  	<%= link_to comment.user.name, user_path %>
+	</p>
+
+	<p>
+	  	<strong>Comment:</strong>
+	  	<%= comment.body %>
+	</p>
+<% end %>
+
+<%= link_to 'Add a comment', new_pet_post_comment_path(@pet, @post) %>
+
 <% if @post.pet.user == current_user %>
-	<%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= link_to 'Delete this post', pet_post_path(@post, @pet), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>

@@ -7,7 +7,9 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		@pet = Pet.find(params[:pet_id])
 		@posts = Post.find(params[:id])
+		@comments = Comment.where(post_id: @post.id)
 	end
 
 	def new

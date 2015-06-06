@@ -17,18 +17,18 @@
 </p>
 
 <% if @pet.user == current_user %>
-	<%= link_to 'Add a New Post', new_post_path %>
+	<%= link_to 'Add a New Post', new_pet_post_path(@pet) %>
 <% end %>
 
 <% @posts.each do |post| %>
 	<p>
 	  	<strong>Name:</strong>
-	  	<%= link_to post.title, post %>
+	  	<%= link_to post.title, pet_post_path(@pet, post) %>
 	</p>
 
 	<p>
 	  	<strong>Photo:</strong>
-	  	<%= link_to (image_tag post.image.url(:large)), post %>
+	  	<%= link_to (image_tag post.image.url(:large)), pet_post_path(@pet, post) %>
 	</p>
 <% end %>
 
