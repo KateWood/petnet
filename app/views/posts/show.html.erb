@@ -18,4 +18,6 @@
   	<%= @post.body %>
 </p>
 
-<%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if @post.pet.user == current_user %>
+	<%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

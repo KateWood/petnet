@@ -28,4 +28,6 @@
 	</p>
 <% end %>
 
-<%= link_to 'Delete Pet Profile', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if @pet.user == current_user %>
+	<%= link_to 'Delete Pet Profile', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
