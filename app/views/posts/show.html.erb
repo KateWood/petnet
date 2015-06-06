@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+	<% if @post.pet %>
+        <td><%= link_to @post.pet.name, @post.pet %></td>
+    <% end %>
+</p>
+
+<p>
   	<%= @post.title %>
 </p>
 
@@ -11,3 +17,5 @@
 <p>
   	<%= @post.body %>
 </p>
+
+<%= link_to 'Delete this post', @post, method: :delete, data: { confirm: 'Are you sure?' } %>

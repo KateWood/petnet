@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
 
 	def index
-		
+		@posts = Post.all
 	end
 
 	def show
@@ -33,7 +33,11 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
-		
+		@post.destroy
+		respond_to do |format|
+	      	format.html { redirect_to pets_url, notice: 'Post successfully deleted.' }
+	      	format.json { head :no_content }
+	    end
 	end
 
 private
