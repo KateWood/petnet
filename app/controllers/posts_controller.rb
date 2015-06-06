@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@posts = Post.where(pet_id: @pet.id)
+		@posts = Post.find(params[:id])
 	end
 
 	def new
