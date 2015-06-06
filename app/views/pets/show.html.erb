@@ -16,6 +16,10 @@
 	<%= link_to @pet.user.name, @pet.user %>
 </p>
 
+<% if @pet.user == current_user %>
+	<%= link_to 'Add a New Post', new_post_path %>
+<% end %>
+
 <% @posts.each do |post| %>
 	<p>
 	  	<strong>Name:</strong>

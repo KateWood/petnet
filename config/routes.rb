@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   get "posts" => "posts#index"
   post "posts" => "posts#create"
-  get "pets/:id/posts/new" => "posts#new"
+  get "pets/:id/posts/new" => "posts#new", as: "new_post"
   get "pets/:id/posts/:id/edit" => "posts#edit"
   get "pets/:id/posts/:id" => "posts#show", as: "post"
   patch "pets/:id/posts/:id" => "posts#update"
