@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   		user = User.find_by(email: params[:login][:email])
 	    if user && user.authenticate(params[:login][:password])
 	      	session[:user_id] = user.id.to_s
-	      	redirect_to users_path
+	      	redirect_to pets_path
 	    else
           render "new"
 	      	# @error = "Email and password do not match"
