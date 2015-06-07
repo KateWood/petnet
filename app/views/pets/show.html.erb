@@ -1,40 +1,42 @@
 <p id="notice"><%= notice %></p>
 
 
-<p>
-  	<strong>Name:</strong>
-  	<%= @pet.name %>
-</p>
+<h2><%= @pet.name %></h2>
+
+<h5>is <%= time_ago_in_words(@pet.birthday) %> old</h5>
 
 <p>
-  	<strong>Photo:</strong>
   	<%= image_tag @pet.image.url(:large) %>
 </p>
 
-<p>
+<button type="button" class="btn btn-default">
 	<strong>Parent:</strong>
 	<%= link_to @pet.user.name, @pet.user %>
-</p>
+</button>
+
+<br><br>
+
+<h2><%= @pet.name %>'s Posts</h2>
 
 <% if @pet.user == current_user %>
-	<%= link_to 'Add a New Post', new_pet_post_path(@pet) %>
+	<button type="button" class="btn btn-default">
+		<%= link_to 'Add a New Post', new_pet_post_path(@pet) %>
+	</button>
 <% end %>
 
-<% @posts.each do |post| %>
-	<p>
-	  	<strong>Name:</strong>
-	  	<%= link_to post.title, pet_post_path(@pet, post) %>
-	</p>
+<div class="border">
+	<% @posts.each do |post| %>
+		<h4><%= link_to post.title, pet_post_path(@pet, post) %></h4>
 
-	<p>
-	  	<strong>Photo:</strong>
-	  	<%= link_to (image_tag post.image.url(:large)), pet_post_path(@pet, post) %>
-	</p>
-<% end %>
+		<p>
+		  	<%= link_to (image_tag post.image.url(:large)), pet_post_path(@pet, post) %>
+		</p>
+	<% end %>
+</div>
 
 <% if @pet.user == current_user %>
-	<div class="btn btn-danger delete">
+	<button class="btn btn-danger delete">
 		<%= link_to 'Delete Pet Profile', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</div>
+	</button>
 <% end %>
 

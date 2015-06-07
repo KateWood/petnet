@@ -1,34 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  	<strong>Name:</strong>
+<h2>
   	<%= @user.name %>
-</p>
+</h2>
 
 <p>
-  	<strong>Photo:</strong>
   	<%= image_tag @user.image.url(:large) %>
 </p>
 
 <p>
-  	<strong>Email:</strong>
-  	<%= mail_to @user.email, @user.email %>
+  	<button type="button" class="btn btn-default">
+  		<%= mail_to @user.email, @user.email %>
+  	</button>
 </p>
 
-<% @pets.each do |pet| %>
-	<p>
-	  	<strong>Name:</strong>
-	  	<%= link_to pet.name, pet %>
-	</p>
+<br>
 
-	<p>
-	  	<strong>Photo:</strong>
-	  	<%= link_to (image_tag pet.image.url(:large)), pet %>
-	</p>
+<h2><%= @user.name %>'s Pets</h2>
+
+<% @pets.each do |pet| %>
+	<div class="border">
+		<button type="button" class="btn btn-default">
+		  	<%= link_to pet.name, pet %>
+		</button>
+		<br><br>
+		<p>
+		  	<%= link_to (image_tag pet.image.url(:large)), pet %>
+		</p>
+	</div>
 <% end %>
 
 <% if @user == current_user %>
 	<div class="btn btn-danger delete">
-		<%= link_to 'Delete Profile', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to 'Delete Profile', @login, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 <% end %>

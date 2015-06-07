@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h2>
 	<% if @post.pet %>
-        <td><%= link_to @post.pet.name, @post.pet %></td>
+        <%= link_to @post.pet.name, @post.pet %>
     <% end %>
-</p>
+</h2>
 
-<p>
+<h4>
   	<%= @post.title %>
-</p>
+</h4>
 
 <p>
   	<%= image_tag @post.image.url(:large) %>
@@ -19,18 +19,17 @@
 </p>
 
 <% @comments.each do |comment| %>
-	<p>
-	  	<strong>Posted by:</strong>
-	  	<%= link_to comment.user.name, comment.user %>
-	</p>
-
-	<p>
-	  	<strong>Comment:</strong>
-	  	<%= comment.body %>
-	</p>
+	<div class="border">
+		<p>
+		  	<%= link_to comment.user.name, comment.user %> says:
+		  	<%= comment.body %>
+		</p>
+	</div>
 <% end %>
 
-<%= link_to 'Add a comment', new_pet_post_comment_path(@pet, @post) %>
+<button type="button" class="btn btn-default">
+	<%= link_to 'Add a comment', new_pet_post_comment_path(@pet, @post) %>
+</button>
 
 <% if @post.pet.user == current_user %>
 	<div class="btn btn-danger delete">

@@ -15,7 +15,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+BODY {
+	background-color: #FFFFF5;
+}
+
+.nav-blue {
+	background-color: #99CCFF;
+}
+
 .delete {
 	float: right;
 	margin: 20px;
+}
+
+.add-margin {
+	margin-left: 10px;
+}
+
+.border {
+	padding: 10px;
+	margin: 10px 10px 10px 0;
+	border: 3px solid #99CCFF;
+	background-color: #C0EAF8;
 }
