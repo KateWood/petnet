@@ -33,5 +33,7 @@
 <%= link_to 'Add a comment', new_pet_post_comment_path(@pet, @post) %>
 
 <% if @post.pet.user == current_user %>
-	<%= link_to 'Delete this post', pet_post_path(@pet, @post), method: :delete, data: { confirm: 'Are you sure?' } %>
+	<div class="btn btn-danger delete">
+		<%= link_to 'Delete this post', pet_post_path(@pet, @post), method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
 <% end %>

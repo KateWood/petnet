@@ -28,5 +28,7 @@
 <% end %>
 
 <% if @user == current_user %>
-	<%= link_to 'Delete Profile', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<div class="btn btn-danger delete">
+		<%= link_to 'Delete Profile', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
 <% end %>
