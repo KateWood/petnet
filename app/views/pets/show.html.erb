@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-
-<h2><%= @pet.name %></h2>
+<h2><%= @pet.name %>
+	<% if @pet.user == current_user %>
+		<button type="button" class="btn btn-default">
+			<%= link_to 'Edit this profile', edit_pet_path(@pet) %>
+		</button>
+	<% end %>
+</h2>
 
 <h5>is <%= time_ago_in_words(@pet.birthday) %> old</h5>
 
