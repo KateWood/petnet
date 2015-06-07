@@ -4,6 +4,9 @@
 	<% if @post.pet %>
         <%= link_to @post.pet.name, @post.pet %>
     <% end %>
+    <button type="button" class="btn btn-default">
+		<%= link_to 'Edit this post', edit_pet_post_path(@pet, @post) %>
+	</button>
 </h2>
 
 <h4>

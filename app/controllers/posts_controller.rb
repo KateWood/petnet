@@ -20,7 +20,6 @@ class PostsController < ApplicationController
 	end
 
 	def edit
-		
 	end
 
 	def create
@@ -33,7 +32,15 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		
+		respond_to do |format|
+			if @post.update(post_params)
+				format.html { redirect_to pet_post_path(@pet, @post), notice: 'Post was successfully updated.' }
+        		format.json { render :show, status: :ok, location: @pet }
+        	else
+        		format.html { render :edit }
+        		format.json { render json: @post.errors, status: :unprocessable_entity }
+      		end
+      	end
 	end
 
 	def destroy
