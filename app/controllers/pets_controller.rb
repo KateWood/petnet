@@ -4,6 +4,8 @@ class PetsController < ApplicationController
 
 	def index
 		@pets = Pet.all
+		# makes the modal work for adding a new pet
+		@pet = Pet.new
 	end
 
 	def show
@@ -19,6 +21,7 @@ class PetsController < ApplicationController
 		@user = User.find(session[:user_id])
     	@pet = @user.pets.create(pet_params)
 	    @pet = Pet.new(pet_params)
+	    # raise @pet.inspect
 	    redirect_to pets_path
 	end
 

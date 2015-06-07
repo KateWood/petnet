@@ -3,10 +3,14 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
+		# makes the modal work for adding a new pet
+		@pet = Pet.new
 	end
 
 	def show
 		@pets = Pet.where(user_id: @user.id)
+		# makes the modal work for adding a new pet
+		@pet = Pet.new
 	end
 
 	def new

@@ -23,9 +23,24 @@
 
 <h2><%= @user.name %>'s Pets
 	<% if @user == current_user %>
-		<button type="button" class="btn btn-default">
-			<%= link_to 'Add a new pet profile', new_pet_path %>
-		</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add a new pet profile</button>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Add a new pet profile</h4>
+		      		</div>
+		      	<div class="modal-body">
+		        <%= render 'pets/form' %>
+		      	</div>
+		      		<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				        <button type="button" class="btn btn-primary">Save</button>
+		      		</div>
+		    	</div>
+		  	</div>
+		</div>
 	<% end %>
 </h2>
 
