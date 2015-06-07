@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 	def new
 		@post = Post.new
 		@user = User.find(session[:user_id])
+		@pet = Pet.find(params[:pet_id])
 		@pets = Pet.where(user_id: @user.id)
 	end
 
@@ -24,10 +25,11 @@ class PostsController < ApplicationController
 
 	def create
 		@user = User.find(session[:user_id])
+		@pet = Pet.find(params[:pet_id])
 		@pets = Pet.where(user_id: @user.id)
 		@post = Post.new(post_params)
 		@post.save
-		redirect_to posts_path
+		redirect_to pet_posts_path
 	end
 
 	def update
@@ -45,6 +47,7 @@ class PostsController < ApplicationController
 private
 
 	def set_post
+		@pet = Pet.find(params[:pet_id])
 		@post = Post.find(params[:id])
 	end
 
