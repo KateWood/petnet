@@ -28,10 +28,10 @@ class PostsController < ApplicationController
 		@pets = Pet.where(user_id: @user.id)
 		@post = Post.new(post_params)
 		@post.save
-		redirect_to pet_posts_path
+		redirect_to pet_path(@pet)
 	end
 
-	def update
+	def update 
 		respond_to do |format|
 			if @post.update(post_params)
 				format.html { redirect_to pet_post_path(@pet, @post), notice: 'Post was successfully updated.' }
