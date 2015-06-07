@@ -21,7 +21,13 @@
 
 <br>
 
-<h2><%= @user.name %>'s Pets</h2>
+<h2><%= @user.name %>'s Pets
+	<% if @user == current_user %>
+		<button type="button" class="btn btn-default">
+			<%= link_to 'Add a new pet profile', new_pet_path %>
+		</button>
+	<% end %>
+</h2>
 
 <% @pets.each do |pet| %>
 	<div class="border">
