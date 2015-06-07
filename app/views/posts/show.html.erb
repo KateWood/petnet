@@ -21,7 +21,7 @@
 <% @comments.each do |comment| %>
 	<p>
 	  	<strong>Posted by:</strong>
-	  	<%= link_to comment.user.name, user_path %>
+	  	<%= link_to comment.user.name, comment.user %>
 	</p>
 
 	<p>
