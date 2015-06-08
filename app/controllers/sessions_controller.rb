@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
-	def new
+    def new
+      @pets = Pet.all
   	end
 
   	def create
