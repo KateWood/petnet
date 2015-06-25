@@ -23,5 +23,5 @@ test:
 production:
   <<: *default
   database: petnet_production
-  username: petnet_admin
-  password: <%= ENV['PETNET_ADMIN_PASSWORD'] %>
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
