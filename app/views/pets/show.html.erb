@@ -25,7 +25,13 @@
 <h5>is <%= time_ago_in_words(@pet.birthday) %> old</h5>
 
 <p>
-  	<%= image_tag @pet.image.url(:large) %>
+	<% if @pet.image_file_name == nil && @pet.user.image_file_name == nil %>
+		<%= image_tag 'default.jpg' %>
+	<% elsif @pet.image_file_name == nil %>
+		<%= image_tag @pet.user.image.url(:large) %>
+	<% else %>
+		<%= image_tag @pet.image.url(:large) %>
+	<% end %>
 </p>
 
 <div class="border">

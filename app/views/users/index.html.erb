@@ -31,7 +31,13 @@
     	<% @users.each do |user| %>
       	<tr>
 	        <td><%= link_to user.name, user %></td>
-          <td><%= link_to (image_tag user.image.url(:small)), user %></td>
+          <td>
+            <% if user.image_file_name == nil %>
+              <%= link_to (image_tag 'default.jpg'), user %>
+            <% else %>
+              <%= link_to (image_tag user.image.url(:small)), user %>
+            <% end %>
+          </td>
 	        <td><%= mail_to user.email, user.email %></td>
       	</tr>
     	<% end %>
