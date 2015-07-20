@@ -1,4 +1,4 @@
-d<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <h2>
 	<% if @post.pet %>
@@ -47,7 +47,15 @@ d<p id="notice"><%= notice %></p>
 </h4>
 
 <p>
-  	<%= image_tag @post.image.url(:large) %>
+	<% if @post.image_file_name == nil && @post.pet.image_file_name == nil && @post.pet.user.image_file_name == nil %>
+		<%= image_tag 'default.jpg' %>
+	<% elsif @post.image_file_name == nil && @post.pet.image_file_name == nil %>
+		<%= image_tag @post.pet.user.image.url(:large) %>
+	<% elsif @post.image_file_name == nil %>
+		<%= image_tag @post.pet.image.url(:large) %>
+	<% else %>
+		<%= image_tag @post.image.url(:large) %>
+	<% end %>
 </p>
 
 <p>
