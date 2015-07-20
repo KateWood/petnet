@@ -24,7 +24,11 @@
 </h2>
 
 <p>
-  	<%= image_tag @user.image.url(:large) %>
+	<% if @user.image_file_name == nil %>
+		<%= image_tag 'default.jpg' %>
+	<% else %>
+		<%= image_tag @user.image.url(:large) %>
+	<% end %>
 </p>
 
 <p>
