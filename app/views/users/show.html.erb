@@ -68,7 +68,13 @@
 		</button>
 		<br><br>
 		<p>
-		  	<%= link_to (image_tag pet.image.url(:large)), pet %>
+			<% if pet.image_file_name == nil && pet.user.image_file_name == nil %>
+				<%= link_to (image_tag 'default.jpg'), pet %>
+			<% elsif pet.image_file_name == nil %>
+				<%= link_to (image_tag pet.user.image.url(:large)), pet %>
+			<% else %>
+				<%= link_to (image_tag pet.image.url(:large)), pet %>
+			<% end %>
 		</p>
 	</div>
 <% end %>
