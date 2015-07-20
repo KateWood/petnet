@@ -22,7 +22,9 @@
 	<% end %>
 </h2>
 
-<h5>is <%= time_ago_in_words(@pet.birthday) %> old</h5>
+<% if @pet.birthday %>
+	<h5>is <%= time_ago_in_words(@pet.birthday) %> old</h5>
+<% end %>
 
 <p>
 	<% if @pet.image_file_name == nil && @pet.user.image_file_name == nil %>
