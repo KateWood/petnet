@@ -37,10 +37,18 @@
 
 <div class="container">
 
-  <%= flash %>
+  <% if flash[:error] %>
+    <% flash[:error].each do |message| %>
+      <div class="alert alert-danger" role="alert"><%= message %></div>
+    <% end %>
+  <% end %>
+
+  <% if flash[:notice] %>
+    <div class="alert alert-info" role="alert"><%= flash[:notice] %></div>
+  <% end %>
 
   <%= yield %>
-  
+
 </div>
 
 </body>
