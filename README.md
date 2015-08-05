@@ -51,8 +51,12 @@ Then fill in all of your pet's information here:
 ![Add Pet Modal](/app/assets/images/addpetprofilemodal.png)
 
 ######Step 3: Create posts for your pet.
+First, click this button:
+![Add Post Button](/app/assets/images/addpostbutton.png)
 <br>
-![Pet Post](/app/assets/images/petnetpost.png)
+Then write a fun post for your pet here (with a picture!):
+<br>
+![Add Post](/app/assets/images/addpost.png)
 
 ######Now you have profiles for you and your pets!
 <br>
