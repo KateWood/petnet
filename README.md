@@ -27,9 +27,9 @@ Welcome to Petnet!
 <br>
 ![Petnet Landing Page](/app/assets/images/petnetlanding.png)
 
-Before enjoying all that Muziqala has to offer, you must authenticate with Spotify.
+Step 1: Create a Pet Parent profile for yourself:
 <br>
-![Connect to Spotify Button](/app/assets/images/connectbutton.png)
+![Petnet Parent Page](/app/assets/images/petnetparent.png)
 
 Now that you're signed in, it's time to search for your favorite music. Just choose a category from the drop down and type in what you want to find:
 <br>
