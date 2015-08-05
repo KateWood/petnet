@@ -39,9 +39,9 @@ Step 3: Create posts for your pet.
 <br>
 ![Pet Post](/app/assets/images/petnetposts.png)
 
-If you want to add a track to the community playlist, just click this button:
+Now you can checkout other pets!
 <br>
-![Add to Playlist Button](/app/assets/images/addtoplaylist.png)
+![Pets Directory](/app/assets/images/petnetpets.png)
 
 The song will then appear on the playlist page:
 <br>
