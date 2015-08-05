@@ -43,8 +43,12 @@ Click this button:
 ![Create User Button](/app/assets/images/createuserbutton.png)
 
 ######Step 2: Create profiles for each of your pets.
+First, click this button:
+![Add Pet Button](/app/assets/images/addpetprofilebutton.png)
 <br>
-![Pet Profile](/app/assets/images/petnetpetprofile.png)
+Then fill in all of your pet's information here:
+<br>
+![Add Pet Modal](/app/assets/images/addpetprofilemodal.png)
 
 ######Step 3: Create posts for your pet.
 <br>
