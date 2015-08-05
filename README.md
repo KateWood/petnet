@@ -17,6 +17,10 @@ Pet parents can sign up for an account, and then create profiles for all of thei
 
 * Testing: RSpec, Travis CI
 
+#### See Petnet in Action
+
+[Petnet on Heroku](https://gapetnet.herokuapp.com/)
+
 #### Getting Started
 
 If you fork this repo, you must run `bundle install` and `rake db:migrate` in order for the app to function properly.
@@ -27,24 +31,32 @@ Welcome to Petnet!
 <br>
 ![Petnet Landing Page](/app/assets/images/petnetlanding.png)
 
-Step 1: Create a Pet Parent profile for yourself.
+######Step 1: Create a Pet Parent profile for yourself.
+First, click this button:
 <br>
-![Pet Parent Profile](/app/assets/images/petnetparent.png)
+![Sign Up Link](/app/assets/images/signupbutton.png)
+Enter your information in the form:
+<br>
+![Sign Up Page](/app/assets/images/signuppage.png)
+Click this button:
+<br>
+![Create User Button](/app/assets/images/createuserbutton.png)
 
-Step 2: Create profiles for each of your pets.
+######Step 2: Create profiles for each of your pets.
 <br>
 ![Pet Profile](/app/assets/images/petnetpetprofile.png)
 
-Step 3: Create posts for your pet.
+######Step 3: Create posts for your pet.
 <br>
 ![Pet Post](/app/assets/images/petnetpost.png)
 
-Now you can check out other pets!
+######Now you have profiles for you and your pets!
+<br>
+![Pet Parent Profile](/app/assets/images/petnetparent.png)
 <br>
 ![Pets Directory](/app/assets/images/petnetpets.png)
 
 Users can comment on pet posts as a fun way to interact with friends!
-
 
 
 
