@@ -27,13 +27,13 @@ Welcome to Petnet!
 <br>
 ![Petnet Landing Page](/app/assets/images/petnetlanding.png)
 
-Step 1: Create a Pet Parent profile for yourself:
+Step 1: Create a Pet Parent profile for yourself.
 <br>
-![Petnet Parent Page](/app/assets/images/petnetparent.png)
+![Pet Parent Profile](/app/assets/images/petnetparent.png)
 
-Now that you're signed in, it's time to search for your favorite music. Just choose a category from the drop down and type in what you want to find:
+Step 2: Create profiles for each of your pets.
 <br>
-![Search](/app/assets/images/search.png)
+![Pet Profile](/app/assets/images/petnetpetprofile.png)
 
 Your search results will appear on a new page.
 <br>
