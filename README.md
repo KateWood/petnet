@@ -37,9 +37,9 @@ Step 2: Create profiles for each of your pets.
 
 Step 3: Create posts for your pet.
 <br>
-![Pet Post](/app/assets/images/petnetposts.png)
+![Pet Post](/app/assets/images/petnetpost.png)
 
-Now you can checkout other pets!
+Now you can check out other pets!
 <br>
 ![Pets Directory](/app/assets/images/petnetpets.png)
 
