@@ -43,11 +43,7 @@ Now you can checkout other pets!
 <br>
 ![Pets Directory](/app/assets/images/petnetpets.png)
 
-The song will then appear on the playlist page:
-<br>
-![Palylist](/app/assets/images/playlist.png)
-
-Now you can enjoy your favorite music on Muziqala!
+Users can comment on pet posts as a fun way to interact with friends!
 
 
 
