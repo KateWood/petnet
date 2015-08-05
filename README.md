@@ -78,8 +78,6 @@ Voila!
 <br>
 ![Post with Comment](/app/assets/images/postwithcomment.png)
 
-Users can comment on pet posts as a fun way to interact with friends!
-
 
 
 
