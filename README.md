@@ -35,9 +35,9 @@ Step 2: Create profiles for each of your pets.
 <br>
 ![Pet Profile](/app/assets/images/petnetpetprofile.png)
 
-Your search results will appear on a new page.
+Step 3: Create posts for your pet.
 <br>
-![Search Results](/app/assets/images/searchresults.png)
+![Pet Post](/app/assets/images/petnetposts.png)
 
 If you want to add a track to the community playlist, just click this button:
 <br>
