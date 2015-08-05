@@ -33,13 +33,13 @@ Welcome to Petnet!
 
 ######Step 1: Create a Pet Parent profile for yourself.
 First, click this button:
-<br>
 ![Sign Up Link](/app/assets/images/signupbutton.png)
+<br>
 Enter your information in the form:
 <br>
 ![Sign Up Page](/app/assets/images/signuppage.png)
-Click this button:
 <br>
+Click this button:
 ![Create User Button](/app/assets/images/createuserbutton.png)
 
 ######Step 2: Create profiles for each of your pets.
