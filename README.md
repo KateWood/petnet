@@ -17,6 +17,10 @@ Pet parents can sign up for an account, and then create profiles for all of thei
 
 * Testing: RSpec, Travis CI
 
+#### See Petnet in Action
+
+[Petnet on Heroku](https://gapetnet.herokuapp.com/)
+
 #### Getting Started
 
 If you fork this repo, you must run `bundle install` and `rake db:migrate` in order for the app to function properly.
