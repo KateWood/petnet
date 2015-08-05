@@ -31,19 +31,19 @@ Welcome to Petnet!
 <br>
 ![Petnet Landing Page](/app/assets/images/petnetlanding.png)
 
-Step 1: Create a Pet Parent profile for yourself.
+######Step 1: Create a Pet Parent profile for yourself.
 <br>
 ![Pet Parent Profile](/app/assets/images/petnetparent.png)
 
-Step 2: Create profiles for each of your pets.
+######Step 2: Create profiles for each of your pets.
 <br>
 ![Pet Profile](/app/assets/images/petnetpetprofile.png)
 
-Step 3: Create posts for your pet.
+######Step 3: Create posts for your pet.
 <br>
 ![Pet Post](/app/assets/images/petnetpost.png)
 
-Now you can check out other pets!
+######Now you can check out other pets!
 <br>
 ![Pets Directory](/app/assets/images/petnetpets.png)
 
