@@ -1,10 +1,9 @@
 [![Build Status](https://travis-ci.org/KateWood/petnet.svg?branch=master)](https://travis-ci.org/KateWood/petnet)
 
-# muziqala
+# Petnet
 
-Muziqala is an app that allows users to link their accounts for other streaming services and listen to all of their music in one place.
-
-Users can search for music from any of the services they have linked to their account and make playlists of their favorite music, without worrying about which services provide which songs.
+Have you ever gotten a Facebook friend request from a dog? Do you maintain a Facebook profile for your pet? Silly pets, Facebook is for people. Pets deserve their own social network! Enter Petnet, a social newtork for pets and the parents who love them.
+Pet parents can sign up for an account, and then create profiles for all of their fur babies. Pets can create blog posts, which pet parents can comment on.
 
 #### Technologies Used
 
@@ -22,11 +21,9 @@ Users can search for music from any of the services they have linked to their ac
 
 If you fork this repo, you must run `bundle install` and `rake db:migrate` in order for the app to function properly.
 
-Muziqala uses Spotify authentication, so set up your own version of the app on Facebook to obtain your own App ID and Secret Key.
-
 #### Joining Petnet
 
-Welcome to Muziqala!
+Welcome to Petnet!
 <br>
 ![Muziqala Landing Page](/app/assets/images/muziqalalanding.png)
 
