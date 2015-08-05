@@ -16,7 +16,7 @@ Users can search for music from any of the services they have linked to their ac
 
 * Bootstrap-SASS ~> 3.3.4
 
-* Testing: RSpec, FactoryGirl, Capybara, Travis CI
+* Testing: RSpec, Travis CI
 
 #### Getting Started
 
@@ -24,7 +24,7 @@ If you fork this repo, you must run `bundle install` and `rake db:migrate` in or
 
 Muziqala uses Spotify authentication, so set up your own version of the app on Facebook to obtain your own App ID and Secret Key.
 
-#### Connect with Spotify
+#### Joining Petnet
 
 Welcome to Muziqala!
 <br>
