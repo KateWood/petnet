@@ -25,7 +25,7 @@ If you fork this repo, you must run `bundle install` and `rake db:migrate` in or
 
 Welcome to Petnet!
 <br>
-![Muziqala Landing Page](/app/assets/images/muziqalalanding.png)
+![Petnet Landing Page](/app/assets/images/petnetlanding.png)
 
 Before enjoying all that Muziqala has to offer, you must authenticate with Spotify.
 <br>
