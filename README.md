@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/KateWood/project_2.svg?branch=master)](https://travis-ci.org/KateWood/project_2)
+[![Build Status](https://travis-ci.org/KateWood/petnet.svg?branch=master)](https://travis-ci.org/KateWood/petnet)
