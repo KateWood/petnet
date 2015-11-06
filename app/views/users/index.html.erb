@@ -1,22 +1,26 @@
-<h1>Pet Parents
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add a new pet profile</button>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add a new pet profile</h4>
+<% if current_user %>
+  <h1>Pet Parents
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add a new pet profile</button>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Add a new pet profile</h4>
+                </div>
+              <div class="modal-body">
+              <%= render 'pets/form' %>
               </div>
-            <div class="modal-body">
-            <%= render 'pets/form' %>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
             </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              </div>
           </div>
-        </div>
-    </div>
-</h1>
+      </div>
+  </h1>
+<% else %>
+  <h1>Pet Parents</h1>
+<% end %>
 <table class="table table-hover">
   	<thead>
     	<tr>
