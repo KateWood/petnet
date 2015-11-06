@@ -13,13 +13,20 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@post = Post.new
-		@user = User.find(session[:user_id])
-		@pet = Pet.find(params[:pet_id])
-		@pets = Pet.where(user_id: @user.id)
+		if session[:user_id] != nil
+			@post = Post.new
+			@user = User.find(session[:user_id])
+			@pet = Pet.find(params[:pet_id])
+			@pets = Pet.where(user_id: @user.id)
+		else
+			redirect_to root_path
+		end
 	end
 
 	def edit
+		if session[:user_id] == nil
+			redirect_to root_path
+		end
 	end
 
 	def create

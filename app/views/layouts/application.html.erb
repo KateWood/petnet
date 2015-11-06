@@ -21,15 +21,14 @@
       </button>
       <a class="navbar-brand" href="pets">Petnet</a>
     </div>
-        <button type="button" class="btn btn-default navbar-btn navbar-left"><%= link_to 'View Pets', pets_path %></button>
-        <button type="button" class="btn btn-default navbar-btn navbar-left"><%= link_to 'View Pet Parents', users_path %></button>
-
+        <%= link_to "View Pets", pets_path, {class: "btn btn-default navbar-btn navbar-left"} %>
+        <%= link_to "View Pet Parents", users_path, {class: "btn btn-default navbar-btn navbar-left"} %>
         <% if current_user %>
             <button type="button" class="btn btn-default navbar-btn navbar-right"><%= link_to 'Log Out', logout_path, method: :delete %></button>
-            <button type="button" class="btn btn-default navbar-btn navbar-right">Logged in as: <%= link_to current_user.name, user_path(current_user) %></button>
+            <%= link_to "Logged in as: " + current_user.name, user_path(current_user), {class: "btn btn-default navbar-btn navbar-right"} %>
         <% else %>
-            <button type="button" class="btn btn-default navbar-btn navbar-right"><%= link_to 'Log In', login_path %></button>
-            <button type="button" class="btn btn-default navbar-btn navbar-right"><%= link_to 'Sign Up', users_new_path %></button>
+            <%= link_to 'Log In', login_path, {class: "btn btn-default navbar-btn navbar-right"} %>
+            <%= link_to 'Sign Up', users_new_path, {class: "btn btn-default navbar-btn navbar-right"} %>
         <% end %>
     </div>
   </div>
