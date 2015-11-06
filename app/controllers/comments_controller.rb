@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
 	end
 
 	def new
-		if current_user
+		if session[:user_id] != nil
 			@comment = Comment.new
 			@pet = Pet.find(params[:pet_id])
 			@post = Post.find(params[:post_id])
@@ -19,10 +19,6 @@ class CommentsController < ApplicationController
 		else
 			redirect_to root_path
 		end
-	end
-
-	def edit
-		
 	end
 
 	def create
@@ -33,10 +29,6 @@ class CommentsController < ApplicationController
 		@comment.user_id = @user.id
 		@comment.save
 		redirect_to pet_post_path(params[:pet_id],params[:post_id])
-	end
-
-	def update
-		
 	end
 
 	def destroy
