@@ -20,6 +20,7 @@
   </h1>
 <% else %>
   <h1>Petnet Pets</h1>
+  <p><%= link_to "Log in", login_path %> or <%= link_to "sign up", users_new_path %> to add a pet profile!</p>
 <% end %>
 <table class="table table-hover">
   	<thead>
